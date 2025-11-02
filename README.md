@@ -41,17 +41,17 @@
 
 ## Сборка и запуск
 1. Клонируйте репозиторий:
-```bash
+
 git clone https://github.com/G-dev-ui/portfolio.git
-bash```
+
 2. Перейдите в каталог проекта:
-```bash
+
 cd portfolio
 
 3. Установите зависимости:
-```bash
+
 flutter pub get
 
 4. Запустите приложение на эмуляторе или устройстве:
-```bash
+
 flutter run
