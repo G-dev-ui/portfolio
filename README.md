@@ -1,4 +1,6 @@
 # Rick and Morty App
+![photo_2025-11-02 19 10 28](https://github.com/user-attachments/assets/a1035f82-9080-4f03-929e-701a21b3c1da)
+![photo_2025-11-02 19 10 25](https://github.com/user-attachments/assets/037ed260-6f68-4b5d-9997-a28396809fb8)
 
 ## Описание проекта
 Это мобильное приложение на Flutter для просмотра персонажей сериала **Rick and Morty**.  
