@@ -43,7 +43,7 @@
 1. Клонируйте репозиторий:
 ```bash
 git clone https://github.com/G-dev-ui/portfolio.git
-
+bash```
 2. Перейдите в каталог проекта:
 ```bash
 cd portfolio
