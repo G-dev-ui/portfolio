@@ -1,8 +1,8 @@
 # Rick and Morty App
 <h3>Скриншоты приложения</h3>
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="https://github.com/user-attachments/assets/a1035f82-9080-4f03-929e-701a21b3c1da" alt="Screenshot 1" width="300"/>
   <img src="https://github.com/user-attachments/assets/037ed260-6f68-4b5d-9997-a28396809fb8" alt="Screenshot 2" width="300"/>
+  <img src="https://github.com/user-attachments/assets/a1035f82-9080-4f03-929e-701a21b3c1da" alt="Screenshot 1" width="300"/>
 </div>
 
 
