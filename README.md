@@ -1,16 +1,36 @@
-# portfolio
+# Rick and Morty App
 
-A new Flutter project.
+## Описание проекта
+Это мобильное приложение на Flutter для просмотра персонажей сериала **Rick and Morty**.  
+Приложение использует актуальный стек технологий, расширяя функциональность через полезные библиотеки.  
 
-## Getting Started
+Основные возможности:
+- Просмотр списка персонажей с пагинацией
+- Возможность отмечать персонажей как избранные
+- Кэширование данных для работы оффлайн
 
-This project is a starting point for a Flutter application.
+## Версии и зависимости
 
-A few resources to get you started if this is your first Flutter project:
+- **Flutter**: ^3.8.1
+- **Dart**: ^3.8.1
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Основные зависимости
+- `cupertino_icons` — стандартные иконки для iOS
+- **Работа с сетью (API)**
+  - `http` — для выполнения HTTP-запросов
+- **Локальное хранилище**
+  - `hive` и `hive_flutter` — для кэширования данных
+  - `cached_network_image` — для кэширования изображений
+- **Управление состоянием**
+  - `flutter_bloc` — управление состоянием через BLoC
+  - `equatable` — для сравнения объектов в BLoC
+- **Модели и сериализация**
+  - `json_annotation` — аннотации для генерации кода сериализации
+- **Навигация и утилиты**
+  - `path_provider` — доступ к файловой системе
+- **UI и взаимодействие**
+  - `flutter_launcher_icons` — генерация иконок приложения
+  - `custom_refresh_indicator` — кастомный индикатор обновления
+  - `like_button` — кнопка «Нравится»
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
