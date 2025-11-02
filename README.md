@@ -39,4 +39,13 @@
   - `custom_refresh_indicator` — кастомный индикатор обновления
   - `like_button` — кнопка «Нравится»
 
-
+## Сборка и запуск
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/G-dev-ui/portfolio.git
+2. Перейдите в каталог проекта:
+cd portfolio
+3. Установите зависимости:
+flutter pub get
+4. Запустите приложение на эмуляторе или устройстве:
+flutter run
