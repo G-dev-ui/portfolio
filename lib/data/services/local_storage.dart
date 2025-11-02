@@ -10,14 +10,16 @@ class LocalStorage {
     await Hive.openBox(cacheBoxName);
   }
 
-  Future<void> cacheCharacters(List<CharacterModel> characters) async {
+  // Сохраняем страницу отдельно
+  Future<void> cacheCharacters(List<CharacterModel> characters, int page) async {
     final box = Hive.box(cacheBoxName);
-    await box.put('characters', characters.map((c) => c.toJson()).toList());
+    await box.put('characters_page_$page', characters.map((c) => c.toJson()).toList());
   }
 
-  List<CharacterModel> getCachedCharacters() {
+  // Читаем конкретную страницу
+  List<CharacterModel> getCachedCharacters({int page = 1}) {
     final box = Hive.box(cacheBoxName);
-    final data = box.get('characters', defaultValue: []);
+    final data = box.get('characters_page_$page', defaultValue: []);
     return (data as List)
         .map((json) => CharacterModel.fromJson(Map<String, dynamic>.from(json)))
         .toList();
@@ -25,7 +27,7 @@ class LocalStorage {
 
   Future<void> toggleFavorite(CharacterModel character) async {
     final box = Hive.box(favoritesBoxName);
-    final key = character.id.toString(); // используем строковый ключ для безопасности
+    final key = character.id.toString();
     if (box.containsKey(key)) {
       await box.delete(key);
     } else {
@@ -39,5 +41,4 @@ class LocalStorage {
         .map((e) => CharacterModel.fromJson(Map<String, dynamic>.from(e)))
         .toList();
   }
-
 }

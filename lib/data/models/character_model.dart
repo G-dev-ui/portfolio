@@ -36,8 +36,6 @@ class CharacterModel {
     );
   }
 
-
-
   Map<String, dynamic> toJson() => {
     'id': id,
     'name': name,
@@ -47,4 +45,3 @@ class CharacterModel {
     'location': location,
   };
 }
-

@@ -14,24 +14,25 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   #Работа с сетью (API)
-  dio: ^5.9.0
   http: ^1.5.0
 
   #Локальное хранилище
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  cached_network_image: ^3.4.1
 
   #Управление состоянием
   flutter_bloc: ^9.1.1
   equatable: ^2.0.7
 
   #Модели и сериализация
-  freezed_annotation: ^3.1.0
   json_annotation: ^4.9.0
 
   #Навигация и утилиты
   path_provider: ^2.1.5
 
+  flutter_launcher_icons: ^0.14.4
+  custom_refresh_indicator: ^4.0.1
   like_button: ^2.1.0
 
 dev_dependencies:
@@ -46,9 +47,23 @@ dev_dependencies:
   #Линтеры
   flutter_lints: ^6.0.0
 
+  lottie: ^3.3.1
+
+
 
 flutter_intl:
   enabled: true
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Rick_and_Morty_Season_3.jpg"   # путь к твоему изображению иконки
+  adaptive_icon_background: "#1A1A1A"   # цвет заднего фона для Android (можно hex)
+  adaptive_icon_foreground: "assets/images/Rick_and_Morty_Season_3.jpg"  # если хочешь адаптивную иконку
+

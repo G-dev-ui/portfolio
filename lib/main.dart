@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'app.dart';
+import 'package:portfolio/ui/theme/rick_and_morty_theme.dart';
 import 'data/services/local_storage.dart';
 import 'data/services/api_service.dart';
 import 'data/repository/character_repository.dart';
 import 'bloc/character_bloc.dart';
-import 'bloc/character_event.dart';       // <- для LoadCharacters
+import 'bloc/character_event.dart';
 import 'ui/main_navigation.dart';
 
 void main() async {
@@ -32,9 +32,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CharacterBloc(repository)..add(LoadCharacters()),
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainNavigation(),
+        theme: RickAndMortyTheme.theme, // <-- применяем тему
+        home: const MainNavigation(),
       ),
     );
   }

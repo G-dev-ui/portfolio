@@ -6,19 +6,23 @@ class CharacterRepository {
   final ApiService api;
   final LocalStorage local;
 
-  CharacterRepository({
-    required this.api,
-    required this.local,
-  });
+  CharacterRepository({required this.api, required this.local});
 
   Future<List<CharacterModel>> getCharacters(int page) async {
     try {
+      // Загружаем страницу с API
       final characters = await api.fetchCharacters(page);
-      await local.cacheCharacters(characters);
+      // Кешируем именно эту страницу
+      await local.cacheCharacters(characters, page);
       return characters;
     } catch (_) {
-      // при оффлайне достаём из кеша
-      return local.getCachedCharacters();
+      // Если интернет недоступен — берем кеш только для нужной страницы
+      final cached = local.getCachedCharacters(page: page);
+      if (cached.isNotEmpty) {
+        return cached;
+      }
+      // Если кеш пустой — возвращаем пустой список
+      return [];
     }
   }
 

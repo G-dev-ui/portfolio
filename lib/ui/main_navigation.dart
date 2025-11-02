@@ -28,13 +28,21 @@ class _MainNavigationState extends State<MainNavigation> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Все',
+            icon: Image.asset(
+              'assets/images/home.png',
+              width: 24,
+              height: 24,
+            ),
+            label: 'Персонажи',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Image.asset(
+              'assets/images/like.png',
+              width: 24,
+              height: 24,
+            ),
             label: 'Избранное',
           ),
         ],
